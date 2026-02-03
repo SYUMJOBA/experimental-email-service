@@ -11,11 +11,15 @@ impl Env {
         os_string.into_string().expect(format!("could not change string {:?} from key {} into a String", p_os_string.clone(), key).as_str())
     }
 
-    fn get_smpt_password() -> String {
+    pub fn get_smpt_password() -> String {
         Self::get_or_fail("smtp_password")
     }
 
-    fn get_smtp_username() -> String {
+    pub fn get_smtp_username() -> String {
         Self::get_or_fail("smtp_username")
+    }
+
+    pub fn get_super_key() -> String {
+        Self::get_or_fail("super_key")
     }
 }
