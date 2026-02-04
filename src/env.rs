@@ -22,4 +22,7 @@ impl Env {
     pub fn get_super_key() -> String {
         Self::get_or_fail("super_key")
     }
+    pub fn get_smtp_relay() -> String {
+        Self::get_or_fail("smtp_relay")
+    }
 }
