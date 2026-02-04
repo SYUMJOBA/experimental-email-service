@@ -17,8 +17,15 @@ async fn main() -> Result<(), String> {
 
 
     EmailService::send_example_email(
-        "sylvio.classico@gmail.com".to_string(), 
-        "Here is some example text for you feed on! :D".to_string()
+        "<ENTER YOUR EXAMPLE TARGET EMAIL>".to_string(), 
+        "Here is some example text for you feed on! :D".to_string(),
+        "Some user name".to_string(),
+        "<ENTER YOUR EXAMPLE TARGET EMAIL>".to_string(),
+        "007".to_string(),
+        "now I guess".to_string(),
+        "<EXAMPLE SUBSCRIBE LINK>".to_string(),
+        "<EXAMPLE UNSUBSCRIBE LINK>".to_string(),
+        "<EXAMPLE PREFERENCES LINK>".to_string()
     ).await?;
 
     println!("email sent!");
